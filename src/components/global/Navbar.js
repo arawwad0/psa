@@ -7,6 +7,7 @@ const Navbar = ({ routes }) => (
   <div className={styles.navbar}>
     {routes.map((route) => (
       <NavLink
+        key={route.url}
         className={styles.navLink}
         activeClassName={styles.navLinkActive}
         exact
