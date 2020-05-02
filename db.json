@@ -1,6 +1,93 @@
 {
   "reports": [
-
+    {
+      "id": 1,
+      "status": "submit",
+      "tracking": "EXPS-1",
+      "title": "Report 1",
+      "assignedTo": "Abdallah",
+      "startDate": "04/01/2020",
+      "endDate": "06/30/2020",
+      "state": "open",
+      "totalAmount": "20.00 EGP"
+    },
+    {
+      "id": 2,
+      "status": "submit",
+      "tracking": "EXPS-2",
+      "title": "Report 2",
+      "assignedTo": "Abdallah",
+      "startDate": "04/01/2020",
+      "endDate": "06/30/2020",
+      "state": "open",
+      "totalAmount": "50.00 EGP"
+    },
+    {
+      "id": 3,
+      "status": "submit",
+      "tracking": "EXPS-3",
+      "title": "Report 3",
+      "assignedTo": "Abdallah",
+      "startDate": "04/01/2020",
+      "endDate": "06/30/2020",
+      "state": "open",
+      "totalAmount": "100.00 EGP"
+    },
+    {
+      "id": 4,
+      "status": "submit",
+      "tracking": "EXPS-4",
+      "title": "Report 4",
+      "assignedTo": "Abdallah",
+      "startDate": "04/01/2020",
+      "endDate": "06/30/2020",
+      "state": "open",
+      "totalAmount": "60.00 EGP"
+    },
+    {
+      "id": 5,
+      "status": "submit",
+      "tracking": "EXPS-5",
+      "title": "Report 5",
+      "assignedTo": "Abdallah",
+      "startDate": "04/01/2020",
+      "endDate": "06/30/2020",
+      "state": "open",
+      "totalAmount": "70.00 EGP"
+    },
+    {
+      "id": 6,
+      "status": "progress",
+      "tracking": "EXPS-6",
+      "title": "Report 6",
+      "assignedTo": "Abdallah",
+      "startDate": "04/01/2020",
+      "endDate": "06/30/2020",
+      "state": "open",
+      "totalAmount": "80.00 EGP"
+    },
+    {
+      "id": 7,
+      "status": "progress",
+      "tracking": "EXPS-7",
+      "title": "Report 7",
+      "assignedTo": "Abdallah",
+      "startDate": "04/01/2020",
+      "endDate": "06/30/2020",
+      "state": "open",
+      "totalAmount": "50.00 EGP"
+    },
+    {
+      "id": 8,
+      "status": "waiting",
+      "tracking": "EXPS-8",
+      "title": "Report 8",
+      "assignedTo": "Abdallah",
+      "startDate": "04/01/2020",
+      "endDate": "06/30/2020",
+      "state": "closed",
+      "totalAmount": "20.00 EGP"
+    }
   ],
   "stats": [
     {

@@ -5,7 +5,7 @@ const ActiveStatContext = createContext({
   setActiveStat() {},
 });
 
-export const ActiveStataProvider = ({ children }) => {
+export const ActiveStateProvider = ({ children }) => {
   const [activeStat, setActiveStat] = useState("submit");
   return (
     <ActiveStatContext.Provider value={{ activeStat, setActiveStat }}>
