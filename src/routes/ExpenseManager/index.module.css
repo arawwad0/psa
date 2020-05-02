@@ -4,3 +4,8 @@
   font-weight: 400;
   margin: 20px 0 3px 20px;
 }
+
+.wrapper{
+  margin: 12px 25px 6px;
+  border: 1px solid #c1c1c1;
+}
