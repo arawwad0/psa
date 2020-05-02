@@ -1,12 +1,16 @@
-import React from 'react';
-import './App.css';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Loader from "components/global/Loader";
 
-function App() {
-  return (
-    <div className="App">
-      upland psa
-    </div>
-  );
-}
+const ExpenseManager = lazy(() => import("routes/ExpenseManager"));
 
+const App = () => (
+  <Router>
+    <Suspense fallback={<Loader />}>
+      <Switch>
+        <Route path="/" component={ExpenseManager}/>
+      </Switch>
+    </Suspense>
+  </Router>
+);
 export default App;
