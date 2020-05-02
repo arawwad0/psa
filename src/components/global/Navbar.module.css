@@ -1,0 +1,22 @@
+.navbar {
+  background-image: linear-gradient(to top, #e5f3f9, #f2f9fc);
+  padding: 2px 15px 0 25px;
+  height: 40px;
+  border: 1px solid #9EB1CA;
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  font-size: 14px;
+  padding: 0 10px 5px 10px;
+  margin: 0 5px;
+  color: #151515;
+  text-decoration: none;
+}
+
+.navLinkActive {
+  border-bottom: 5px solid #197B30;
+  margin-bottom: -5px;
+  font-weight: bold;
+}
