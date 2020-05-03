@@ -3,13 +3,16 @@ import { useHistory } from "react-router-dom";
 import { useMutation } from "react-query";
 import { Input } from "@progress/kendo-react-inputs";
 import { Link } from "react-router-dom";
-import Button from "components/global/Button";
+import { DatePicker } from "@progress/kendo-react-dateinputs";
 
-import styles from "./index.module.css";
+import Button from "components/global/Button";
+import TotalAmount from "components/CreateExpenseManager/TotalAmount";
 import DetailsGrid from "components/CreateExpenseManager/DetailsGrid";
 import SubmitDetails from "components/CreateExpenseManager/SubmitDetails";
 
 import { postReport } from "service";
+
+import styles from "./index.module.css";
 
 const CreateExpenseManager = () => {
   const [title, setTitle] = useState("Abdallah's Report");
@@ -72,6 +75,16 @@ const CreateExpenseManager = () => {
           <Button onClick={handleSave}>Save</Button>
         </div>
       </header>
+      <section className={styles.summary}>
+        <div className={styles.leftSummary}>
+          <label>Start Date<DatePicker value={startDate} onChange={e => setStartDate(e.target.value)} /></label>
+          <label>End Date<DatePicker value={endDate} onChange={e => setEndDate(e.target.value)} /></label>
+          <label>Name<Input value={user} onChange={e => setUser(e.target.value)} /></label>
+        </div>
+        <div className={styles.rightSummary}>
+          <TotalAmount amount={amount} />
+        </div>
+      </section>
       <section className={styles.details}>
         <DetailsGrid data={details} />
         <SubmitDetails handleAddDetails={handleAddDetails} />

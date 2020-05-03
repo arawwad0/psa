@@ -45,3 +45,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
+.summary{
+  composes: details;
+  border: 1px solid #D9E4E9;
+  height: 120px
+}
+
+.leftSummary{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  border-right: 2px solid gray;
+}
