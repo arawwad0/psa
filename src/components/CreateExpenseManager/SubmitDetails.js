@@ -59,7 +59,7 @@ const SubmitDetails = ({ handleAddDetails }) => {
 
 
 SubmitDetails.propTypes = {
-  handleAddDetail: func.isRequired,
+  handleAddDetails: func.isRequired,
 };
 
 export default SubmitDetails;

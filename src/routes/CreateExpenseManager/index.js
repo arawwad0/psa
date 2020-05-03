@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { useMutation } from "react-query";
 import { Input } from "@progress/kendo-react-inputs";
 import { Link } from "react-router-dom";
 import Button from "components/global/Button";
@@ -7,11 +9,45 @@ import styles from "./index.module.css";
 import DetailsGrid from "components/CreateExpenseManager/DetailsGrid";
 import SubmitDetails from "components/CreateExpenseManager/SubmitDetails";
 
+import { postReport } from "service";
+
 const CreateExpenseManager = () => {
   const [title, setTitle] = useState("Abdallah's Report");
   const [details, setDetails] = useState([]);
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  const [user, setUser] = useState("abdallah");
+  const [amount, setAmount] = useState("0 EGP");
+
+  useEffect(() => {
+    const newAmount = details
+      .map((detailRow) => +detailRow.incurred.match(/\d*/)[0])
+      .reduce((acc, cur) => acc + cur, 0);
+    setAmount(`${newAmount} EGP`);
+  }, [details]);
+
+  const history = useHistory();
+
+  const [mutate] = useMutation(postReport, {
+    onSuccess() {
+      history.push("/");
+    },
+  });
 
   const handleAddDetails = (newDetail) => setDetails([...details, newDetail]);
+
+  const handleSave = () => {
+    mutate({
+      status: "submit",
+      tracking: "EXPS-1",
+      title: title,
+      assignedTo: user,
+      startDate,
+      endDate,
+      state: "open",
+      totalAmount: amount,
+    });
+  };
 
   return (
     <>
@@ -33,7 +69,7 @@ const CreateExpenseManager = () => {
           <Button secondary>
             <Link to="/">Back</Link>
           </Button>
-          <Button>Save</Button>
+          <Button onClick={handleSave}>Save</Button>
         </div>
       </header>
       <section className={styles.details}>
