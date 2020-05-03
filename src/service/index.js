@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:3002",
+  baseURL: "https://poc-api-abdallah.herokuapp.com/",
 });
 
 const fetchStats = () => instance.get("/stats");

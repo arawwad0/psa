@@ -1,0 +1,47 @@
+.header {
+  box-shadow: rgba(211, 211, 211, 0.5) 0px 2px 4px 0px;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  height: 60px;
+  padding-left: 23px;
+  padding-right: 25px;
+  padding-top: 2px;
+  background-color: rgb(255, 255, 255);
+  margin: 0px 0px 3px;
+  display: grid;
+  grid-template-columns: 1fr 100px 100px 200px;
+  align-items: center;
+}
+
+.titleInput {
+  width: 200px;
+  margin-right: 200px;
+}
+
+.info {
+  margin-right: 5px;
+}
+
+.infoLabel {
+  color: rgb(149, 149, 149);
+  padding-right: 3px;
+  line-height: 28px;
+  font-size: 12px;
+}
+
+.infoValue {
+  font-weight: bolder;
+  font-size: 12px;
+  color: rgb(13, 74, 98);
+  line-height: 28px;
+}
+
+.btnGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

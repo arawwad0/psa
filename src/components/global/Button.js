@@ -11,7 +11,7 @@ const Button = ({ secondary, tertiary, large, className, ...props }) => {
     { [styles.large]: large },
     { [className]: className }
   );
-  return <button className={classes} {...props}></button>;
+  return <button className={classes} {...props} />;
 };
 
 Button.propTypes = {
