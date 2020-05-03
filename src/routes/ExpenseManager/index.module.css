@@ -9,3 +9,9 @@
   margin: 12px 25px 6px;
   border: 1px solid #c1c1c1;
 }
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
