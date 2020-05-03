@@ -3,7 +3,7 @@ import { func } from "prop-types";
 
 import Button from "components/global/Button";
 import { Input } from "@progress/kendo-react-inputs";
-import { DateInput } from "@progress/kendo-react-dateinputs";
+import { DatePicker } from "@progress/kendo-react-dateinputs";
 
 
 import styles from "./SubmitDetails.module.css";
@@ -32,10 +32,28 @@ const SubmitDetails = ({ handleAddDetails }) => {
   };
 
   return (<section>
-    <div className="btn-group">
+    <div className={styles.btnGroup}>
       <Button tertiary onClick={handleSave}>Save</Button>
       <Button onClick={handleNew}>Save & new</Button>
     </div>
+    <form className={styles.form} onSubmit={e => e.preventDefault()}>
+      <div>
+      <label>Refrence #></label>
+      <Input value={ref} onChange={e => setRef(e.target.value)} />
+      </div>
+      <div>
+      <label>Date</label>
+      <DatePicker value={date} onChange={e => setDate(e.target.value)} />
+      </div>
+      <div>
+      <label>Expense Item</label>
+      <Input value={item} onChange={e => setItem(e.target.value)} />
+      </div>
+      <div>
+      <label>Net Amount</label>
+      <Input value={incurred} onChange={e => setIncurred(e.target.value)} />
+      </div>
+    </form>
   </section>)
 };
 

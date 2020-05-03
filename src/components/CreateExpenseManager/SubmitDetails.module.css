@@ -1,0 +1,20 @@
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.btnGroup{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form > div {
+  margin: 10px 20px;
+}
+
+.form label{
+  color: #767676;
+  line-height: 22px;
+  font-size: 11px;
+  display: block;
+}
