@@ -77,9 +77,24 @@ const CreateExpenseManager = () => {
       </header>
       <section className={styles.summary}>
         <div className={styles.leftSummary}>
-          <label>Start Date<DatePicker value={startDate} onChange={e => setStartDate(e.target.value)} /></label>
-          <label>End Date<DatePicker value={endDate} onChange={e => setEndDate(e.target.value)} /></label>
-          <label>Name<Input value={user} onChange={e => setUser(e.target.value)} /></label>
+          <div className={styles.row}>
+            <label>Start Date</label>
+            <DatePicker
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}
+            />
+          </div>
+          <div className={styles.row}>
+            <label>End Date</label>
+            <DatePicker
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}
+            />
+          </div>
+          <div className={styles.row}>
+            <label>Name</label>
+            <Input value={user} onChange={(e) => setUser(e.target.value)} />
+          </div>
         </div>
         <div className={styles.rightSummary}>
           <TotalAmount amount={amount} />
